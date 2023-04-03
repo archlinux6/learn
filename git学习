@@ -2,3 +2,20 @@
 1.要在Arch Linux上下载Git，请打开终端并输入以下命令：
 sudo pacman -S git
 这将使用Pacman包管理器安装Git。
+
+2.使用 git init 命令来初始化一个 Git 仓库
+git init 该命令执行完后会在当前目录生成一个 .git 目录。(pwd查看当前目录)
+git init newrepo 初始化后，会在 newrepo 目录下会出现一个名为 .git 的目录，所有 Git 需要的数据和资源都存放在这个目录中。
+$ git add *.c
+$ git add README
+$ git commit -m '初始化项目版本'
+以上命令将目录下以 .c 结尾及 README 文件提交到仓库中。（在 Linux 系统中，commit 信息使用单引号 '，Windows 系统，commit 信息使用双引号 "。）
+
+3.我们使用 git clone 从现有 Git 仓库中拷贝项目（类似 svn checkout）。
+克隆仓库的命令格式为：git clone <repo>
+如果我们需要克隆到指定的目录，可以使用以下命令格式：git clone <repo> <directory>
+比如，要克隆 Ruby 语言的 Git 代码仓库 Grit，可以用下面的命令：
+$ git clone git://github.com/schacon/grit.git
+执行该命令后，会在当前目录下创建一个名为grit的目录，其中包含一个 .git 的目录，用于保存下载下来的所有版本记录。
+如果要自己定义要新建的项目目录名称，可以在上面的命令末尾指定新的名字：
+$ git clone git://github.com/schacon/grit.git mygrit
