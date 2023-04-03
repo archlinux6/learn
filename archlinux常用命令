@@ -12,3 +12,6 @@ pacman -S 软件包名1 软件包名2 ...
 2.卸载一个包，并且删除它的所有依赖。
 
 pacman -R 软件包名
+
+3.安装git
+sudo pacman -S git
