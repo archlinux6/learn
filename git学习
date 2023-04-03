@@ -1,1 +1,4 @@
 
+1.要在Arch Linux上下载Git，请打开终端并输入以下命令：
+sudo pacman -S git
+这将使用Pacman包管理器安装Git。
