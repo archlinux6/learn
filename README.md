@@ -1,6 +1,6 @@
 # 常用网站：
 ### 1.archlinux简明指南:
-https://archlinux.icekylin.online
+https://arch.icekylin.online/
 ### 2.免费的ChatGPT镜像网站:
 <https://study.zwjjiaozhu.top/posts/chatgpt-mirror-sites.html>
 ### 3.容易上手的Windows10系统安装教程:
