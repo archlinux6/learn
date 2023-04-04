@@ -31,7 +31,13 @@ git init   - 初始化仓库。
 git add    - 添加文件到暂存区。
 git commit - 将暂存区内容添加到仓库中。
 git clone  - 拷贝一份远程仓库，也就是下载一个项目。
+git remote - 查看当前配置的远程仓库。
+git remote rm 名字 -删除远程仓库。
 
+
+
+Git 远程仓库(Github)教程：
+https://www.runoob.com/git/git-remote-repo.html
 
 注意：我们向GitHub添加公匙出现Key is invalid. You must supply a key in OpenSSH public key format.怎么解决
 直接打开文件复制可能会格式不对
