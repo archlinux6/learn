@@ -17,5 +17,8 @@ yay -S linuxqq  // 百度搜索AUR 进入之后找到 Package Search:QQ 找包�
 
 6.tab 命令补齐  >键 也可以
 
+快捷键：
+shift + alt + t 运行终端
+
 其他命令：
 pacman -Syu       同步源，并更新系统
