@@ -12,6 +12,5 @@ pacman -R 软件包名
 4.安装git
 sudo pacman -S git
 
-
 其他命令：
 pacman -Syu       同步源，并更新系统
