@@ -1,5 +1,5 @@
 # 常用网站：
-### 1.archlinux简明指南:
+### 1.archlinux 简明指南:
 https://arch.icekylin.online/
 ### 2.免费的ChatGPT镜像网站:
 <https://study.zwjjiaozhu.top/posts/chatgpt-mirror-sites.html>
