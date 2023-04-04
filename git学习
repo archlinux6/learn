@@ -3,6 +3,13 @@
 sudo pacman -S git
 这将使用Pacman包管理器安装Git。
 
+安装好git后，再配置
+git config --global user.name  'archlinux6'  //github上的用户名
+git config --global user.email '1239269497@qq.com' //github上的邮箱地址
+
+git config --global user.name 用于设置全局 Git 仓库中的用户名。这意味着在你机器上所有的 Git 仓库都会使用这个用户名。
+注意git config命令的–global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
+
 2.使用 git init 命令来初始化一个 Git 仓库
 git init 该命令执行完后会在当前目录生成一个 .git 目录。(pwd查看当前目录)
 git init newrepo 初始化后，会在 newrepo 目录下会出现一个名为 .git 的目录，所有 Git 需要的数据和资源都存放在这个目录中。
