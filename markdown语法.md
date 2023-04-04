@@ -6,3 +6,12 @@ $(document).ready(function () {
     alert('RUNOOB');
 });
 ```
+
+### 2.链接地址：
+https://www.runoob.com
+```
+<https://www.runoob.com>
+
+```
+效果
+<https://www.runoob.com>
