@@ -12,5 +12,10 @@ pacman -R 软件包名
 4.安装git
 sudo pacman -S git
 
+5.下载QQ
+yay -S linuxqq  // 百度搜索AUR 进入之后找到 Package Search:QQ 找包名
+
+6.tab 命令补齐  >键 也可以
+
 其他命令：
 pacman -Syu       同步源，并更新系统
