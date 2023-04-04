@@ -42,3 +42,17 @@ https://www.runoob.com/git/git-remote-repo.html
 注意：我们向GitHub添加公匙出现Key is invalid. You must supply a key in OpenSSH public key format.怎么解决
 直接打开文件复制可能会格式不对
 解决方法是用cat命令查看文件，或者其他方式查看，总之公钥不能有换行。
+
+总结：
+1. 先连上 Github。
+ssh -T git@github.com 
+2. 克隆项目到本地，自动创建一个learn文件夹
+git clone git@github.com:archlinux6/learn.git
+3. 添加当前目录下的所有文件
+git add .
+4. 提交并备注信息
+git commit -m '添加 README.md 文件'
+5. 提交到 Github
+git push
+6.code .
+用vscode打开当前目录下的所有文件
