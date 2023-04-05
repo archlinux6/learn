@@ -64,6 +64,6 @@ git remote rm 名字 -删除远程仓库。
 4. 提交并备注信息
 `git commit -m '添加 README.md 文件'`
 5. 提交到 Github
-`git push`
-6.`code .`
+`git push`  
+6. `code .`
 用vscode打开当前目录下的所有文件
