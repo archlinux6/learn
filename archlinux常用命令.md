@@ -17,6 +17,16 @@ yay -S linuxqq  // 百度搜索AUR 进入之后找到 Package Search:QQ 找包�
 
 6.tab 命令补齐  >键 也可以
 
+注意:
+`cd ~`  或 `cd ~/`
+是在主文件夹下，里面有
+    cslg     Documents  learn  Music     Public           Templates  单词本.xlsx  yes.pub
+    Desktop  Downloads  miku   Pictures  runoob-git-test  Videos     yes
+
+`cd / `
+是在根文件夹下，里面有
+    bin  boot  dev  etc  home  lib  lib64  lost+found  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+
 快捷键：
 shift + alt + t 运行终端
 
