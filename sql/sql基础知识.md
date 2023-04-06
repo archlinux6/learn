@@ -26,7 +26,8 @@ WHERE condition;
 ```sql
 SELECT * FROM Websites WHERE country='CN';
 ```
-从 "Websites" 表中选取国家为 "CN" 的所有网站。
+从 "Websites" 表中选取国家为 "CN" 的所有网站。  
+
 (4) ORDER BY 用于对结果集进行排序
 ```sql
 SELECT column1, column2, ...
@@ -54,6 +55,11 @@ ORDER BY column1, column2, ... ASC|DESC;
 ```sql
 UPDATE table_name
 SET column1 = value1, column2 = value2, ...
+WHERE condition;
+```
+(7) DELETE 语句用于删除表中的行。
+```sql
+DELETE FROM table_name
 WHERE condition;
 ```
  (n) 其他  
@@ -85,7 +91,7 @@ select * from emp where ename like 'M%';
 - M% : 正则表达式，表示的意思为模糊查询信息为 M 开头的
 - %M% : 表示查询包含M的所有内容。 
 - %M_ : 表示查询以M在倒数第二位的所有内容。
-### 3. 文本字段 vs 数值字段
+### 3. 文本字段 vs 数值字段  
 SQL 使用单引号来环绕文本值（大部分数据库系统也接受双引号）。   
 如果是数值字段，请不要使用引号
 ### 4. 其他
