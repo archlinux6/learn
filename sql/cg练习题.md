@@ -82,7 +82,8 @@ ALTER TABLE sg
 MODIFY indate DATE;
 ```
 
-5.修改职工表 - new
+5.修改职工表 - new  
+
 修改职工表emp：
 
 增加列：部门编号：dno char(3) ，设置外码约束参照部门表dept的dno，并设置删除和更新均为级联。
