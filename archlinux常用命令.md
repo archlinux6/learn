@@ -49,9 +49,9 @@
 
 快捷键：  
 
-`shift + alt + t` 运行终端
-`shift + ctrl + c` 将终端里的东西复制
-`shift + ctrl + v` 将东西复制到终端里
+`shift + alt + t` 运行终端  
+`shift + ctrl + c` 将终端里的东西复制  
+`shift + ctrl + v` 将东西复制到终端里  
 
 其他命令：  
 
@@ -60,4 +60,5 @@
 `yay`   更新yay安装的软件
 
 `mv source_file(文件) dest_file(文件)` 将源文件名 source_file 改为目标文件名 dest_file  
+
 `mv source_file(文件) dest_directory(目录)` 将文件 source_file 移动到目标目录 dest_directory 中  
