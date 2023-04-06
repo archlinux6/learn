@@ -23,4 +23,4 @@ OR
 
 <https://github.com/archlinux6>
 ### 3.Markdown 段落
-段落的换行是使用两个以上空格加上回车。
+段落的换行是使用两个空格。
