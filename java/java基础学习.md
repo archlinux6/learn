@@ -26,6 +26,18 @@ public class Hello {
 } // class定义结束
 ```
 ### 5. 数据类型
-布尔类型boolean只有true和false两个值。
-对于float类型，需要加上f后缀。
-String字符串，首字母要大写。
+布尔类型boolean只有true和false两个值。  
+
+对于float类型，需要加上f后缀。  
+
+String字符串，首字母要大写。  
+### 6. 数组类型
+```java
+   int[] ns = new int[5];
+   或
+   int[] ns = new int[] { 68, 79, 91, 85, 62 };
+   或
+   int[] ns;
+   ns = new int[] { 68, 79, 91, 85, 62 };
+```
+用数组名.length可获取数组大小：
