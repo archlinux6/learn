@@ -51,7 +51,13 @@ String字符串，System.out.println(sum)，首字母要大写。
 
 ```
 用数组名.length可获取数组大小：
-###
+```java
+for (int i : 数组名) {
+    System.out.print(i + ", ");
+}
+```
+可以用来打印数组元素
+###  Java标准库
 import java.util.Arrays;  
 
 使用Arrays.toString(数组名)可以快速获取数组内容    
