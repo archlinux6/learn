@@ -30,14 +30,33 @@ public class Hello {
 
 对于float类型，需要加上f后缀。  
 
-String字符串，首字母要大写。  
+String字符串，System.out.println(sum)，首字母要大写。  
 ### 6. 数组类型
 ```java
+   一维数组：
    int[] ns = new int[5];
+   或
+   int[] ns = { 1, 4, 9, 16, 25 }
    或
    int[] ns = new int[] { 68, 79, 91, 85, 62 };
    或
    int[] ns;
    ns = new int[] { 68, 79, 91, 85, 62 };
+   二维数组：
+   int[][] ns = {
+            { 1, 2, 3, 4 },
+            { 5, 6, 7, 8 },
+            { 9, 10, 11, 12 }
+   };
+
 ```
 用数组名.length可获取数组大小：
+###
+import java.util.Arrays;  
+
+使用Arrays.toString(数组名)可以快速获取数组内容    
+
+Arrays.sort(数组名)可以排序
+
+### 其他 
+println是print line的缩写，表示输出并换行。因此，如果输出后不想换行，可以用print()
