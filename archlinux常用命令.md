@@ -34,7 +34,7 @@
 
 (1) `cd ~`  或 `cd ~/`  
 
-是在主文件夹下，里面有  
+打开终端，默认也是在主文件夹下，里面有  
 
     cslg     Documents  learn  Music     Public           Templates  单词本.xlsx  yes.pub
     Desktop  Downloads  miku   Pictures  runoob-git-test  Videos     yes
