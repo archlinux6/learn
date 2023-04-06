@@ -23,4 +23,24 @@ OR
 
 <https://github.com/archlinux6>
 ### 3.Markdown 段落
-段落的换行是使用两个空格。
+段落的换行是使用两个空格。  
+
+### 4.列表
+有序列表（Ordered List）	  
+```markdown
+1. First item
+2. Second item  
+3. Third item-  
+```
+无序列表（Unordered List）	  
+```markdown
+- First item
+- Second item
+- Third item
+```
+
+
+
+
+### 参考：Markdown 官方教程  
+https://markdown.com.cn/

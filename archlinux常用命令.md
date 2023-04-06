@@ -24,7 +24,8 @@
 
 5.下载QQ  
 
-`yay -S linuxqq ` // 百度搜索AUR 进入之后找到 Package Search:QQ 找包名  
+`yay -S linuxqq ` // 百度搜索AUR 进入之后找到 Package Search:QQ 找包名    
+
 卸载QQ  
 `sudo pacman -Rsc linuxqq  `   
 
