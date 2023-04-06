@@ -25,3 +25,5 @@ public class Hello {
     }
 } // class定义结束
 ```
+### 5. 数据类型
+布尔类型boolean只有true和false两个值，
