@@ -70,4 +70,26 @@ CREATE TABLE sg (
 );
 
 ```
-   
+4.修改库存表 - new  
+
+**修改库存表**：
+修改入库日期列indate 的数据类型，由字符型改为日期型（date）。
+
+【注意：表名必须小写】
+
+```sql
+ALTER TABLE sg
+MODIFY indate DATE;
+```
+
+5.修改职工表 - new
+修改职工表emp：
+
+增加列：部门编号：dno char(3) ，设置外码约束参照部门表dept的dno，并设置删除和更新均为级联。
+
+【注意：表名必须用小写。】
+```sql
+alter table emp add dno char(3),
+add constraint dno foreign key (dno) references dept(dno) 
+on update cascade on delete cascade;
+```

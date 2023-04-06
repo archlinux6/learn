@@ -50,7 +50,7 @@ ORDER BY column1, column2, ... ASC|DESC;
     INSERT INTO table_name (column1,column2,column3,...)
     VALUES (value1,value2,value3,...);
     ```
- (6)  UPDATE 用于更新表中已存在的记录
+(6)  UPDATE 用于更新表中已存在的记录
 
 ```sql
 UPDATE table_name
