@@ -58,11 +58,12 @@ for (int i : 数组名) {
 ```
 可以用来打印数组元素
 ###  Java标准库
-import java.util.Arrays;  
+import java.util.Arrays;   
 
 使用Arrays.toString(数组名)可以快速获取数组内容    
 
-Arrays.sort(数组名)可以排序
+使用Arrays.sort(数组名)可以排序
 
 ### 其他 
-println是print line的缩写，表示输出并换行。因此，如果输出后不想换行，可以用print()
+println是print line的缩写，表示输出并换行。因此，如果输出后不想换行，可以用print() 。
+一个Java源文件可以包含多个类的定义，但只能定义一个public类。
