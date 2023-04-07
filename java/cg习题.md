@@ -275,4 +275,150 @@ public class ShapeTest {
 
 ```
 
-3.
+3.【问题描述】  
+在平面坐标系中，不在一条直线上的三个点确定一个三角形，设计点Point类，由点类组合创建三角形类Triangle，设计要求：
+
+点类Point
+
+     属性：
+
+           x,y坐标
+
+     方法：
+
+          （1）两个参数的构造方法
+
+          （2）计算与另一点的距离方法
+
+三角形类Triangle
+
+     属性：
+
+           三个点
+           三个边
+
+     方法：
+
+          （1）三个参数的构造方法
+
+          （2）判断三个点能否构成一个合法三角形
+
+          （3）计算周长方法
+
+          （4）计算面积方法
+
+
+【输入形式】
+
+         一行6个由空格隔开的点数，依次表示三个点的坐标
+【输出形式】
+
+         两行，第一行周长，第二行面积。（当三点不能构成一个三角形时，输出一行相关信息，在下一行输出0）
+【样例输入1】
+
+  0 0 3 0 3 4
+
+【样例输出1】
+
+ 12.00
+
+ 6.00
+
+【样例输入2】
+
+ 1 1 2 2 3 3
+
+【样例输出2】
+
+ error,can not calculate perimeter
+
+ 0.00
+
+ error,can not calculate area
+
+ 0.00
+
+【样例说明】  
+
+
+```java
+
+import java.util.Scanner;
+class Point 
+{
+               private double x,y;
+               public Point(double x,double y)
+               {
+            	   this.x=x;
+            	   this.y=y;
+               }
+               
+               public double getDistance(Point o)
+               {
+            	   return Math.sqrt((this.x - o.x) *(this.x - o.x) +(this.y - o.y) * (this.y - o.y) );
+               }
+
+}
+class Triangle{
+	        Point p1;
+		    Point p2;
+		    Point p3;
+		    double a;
+		    double b;
+		    double c;
+		    Triangle(Point p1, Point p2, Point p3) {
+		        this.p1 = p1;
+		        this.p2 = p2;
+		        this.p3 = p3;
+		    }
+		    boolean isTriangle(Point p1, Point p2, Point p3) {
+		        this.a = p1.getDistance(p2);
+		        this.b = p1.getDistance(p3);
+		        this.c = p2.getDistance(p3);
+		       if((a+b>c)&&(a+c>b)&&(b+c>a)&&(a-b<c)&&(a-c<b)&&(b-c<a)){
+                         return  true;
+                  }else{
+                         return false;
+                       }
+		    }
+		    
+		    double getPerimeter() {
+		        if (isTriangle(this.p1, this.p2, this.p3)) {
+		          return this.a + this.b + this.c;
+		        } else {
+		            System.out.println("error,can not calculate perimeter");
+		            return 0;
+		        }
+		    }
+		    
+		    double getArea() {
+		       if (isTriangle(this.p1, this.p2, this.p3)) {
+		           double s = getPerimeter() / 2;
+		           return Math.sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
+		       } else {
+		           System.out.println("error,can not calculate area");
+		           return 0;
+		       }
+		    }
+}
+
+public class ShapeTest {
+	public static void main(String[] args){
+	     Scanner in = new Scanner(System.in);
+	     double x1,y1,x2,y2,x3,y3;
+	     x1 = in.nextDouble();
+	     y1 = in.nextDouble();
+	     x2 = in.nextDouble();
+	     y2 = in.nextDouble();
+	     x3 = in.nextDouble();
+	     y3 = in.nextDouble();
+	     Triangle  t = new Triangle(new Point(x1,y1),new Point(x2,y2),new Point(x3,y3));
+	     System.out.printf("%.2f\n",t.getPerimeter());
+	     System.out.printf("%.2f\n",t.getArea());   
+	}
+}
+
+
+
+
+```
