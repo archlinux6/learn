@@ -165,3 +165,114 @@ l  Rectangle类具有类型为double的宽、高属性，具有返回周长和�
 
 l  Circle类具有类型为double的半径属性，具有返回周长、面积的方法。
 
+```java
+class Triangle{
+    private double sideA,sideB,sideC;
+    private boolean boo;
+    public Triangle(double a,double b,double c){
+                     sideA=a;
+                     sideB=b;
+                     sideC=c;
+        boo = judge(a,b,c);
+    }
+    public double getPerimeter(){
+                 if(boo)
+                 {
+                     return(sideA+sideB+sideC);
+                 }
+                 else
+                 {
+                     System.out.println("error,can not calculate perimeter");
+                     return  0;
+                 }
+    }
+    public double getArea(){
+        if(boo){
+            double p=(sideA+sideB+sideC)/2.0;
+            double area=Math.sqrt(p*(p-sideA)*(p-sideB)*(p-sideC));
+            return area;
+        }else{
+            System.out.println("error,can not calculate area");
+            return 0;
+        }
+    }
+    public void setABC(double a,double b,double c){
+        sideA = a;  sideB = b; sideC = c;
+        boo = judge(a,b,c);
+    }
+    public boolean judge(double a,double b,double c){
+        if((a+b>c)&&(a+c>b)&&(b+c>a)&&(a-b<c)&&(a-c<b)&&(b-c<a)){
+                         return  true;
+        }else{
+                         return false;
+        }
+    }
+}
+class Rectangle{
+    private double width,height;
+    Rectangle(double width,double height){
+                 this.width=width;
+                 this.height=height;
+    }
+    public double getPerimeter(){
+        return  2*(width+height);
+    }
+    public double getArea(){
+                return width*height;
+    }
+}
+
+class Circle{
+    private double radius;
+    public Circle(double radius){
+                  this.radius=radius;
+    }
+    public double getArea(){
+      return  Math.PI * radius * radius;
+    }
+    public double getPerimeter(){
+      return Math.PI * 2 * radius;
+    }
+    public double getRadius() {
+        return radius;
+    }
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+}
+
+public class ShapeTest {
+    public static void main(String[] args){
+        double perimeter,area;
+        Circle c=null;
+        Triangle t;
+        Rectangle r;
+        c=new Circle(5)   ;
+        t=new Triangle(6,8,10) ;
+        r=new Rectangle(7,3)  ;
+        perimeter=c.getPerimeter() ;
+        System.out.printf("circle's perimeter:%.2f",perimeter);
+        area=c.getArea();
+        System.out.printf("circle's area:%.2f",area);
+        perimeter=t.getPerimeter() ;
+        System.out.println("triangle's perimeter:"+perimeter);
+        area=t.getArea()    ;
+        System.out.println("triangle's area:"+area);
+        perimeter=r.getPerimeter() ;
+        System.out.println("rectangle's perimeter:"+perimeter);
+        area= r.getArea() ;
+        System.out.println("rectangle's area:"+area);
+        t.setABC(12,34,1);
+        area=t.getArea();
+        System.out.println("triangle's area:"+area);
+        perimeter=t.getPerimeter();
+        System.out.println("triangle's perimeter:"+perimeter);
+    }
+}
+
+
+
+
+```
+
+3.
