@@ -94,3 +94,35 @@ alter table emp add dno char(3),
 add constraint dno foreign key (dno) references dept(dno) 
 on update cascade on delete cascade;
 ```
+6.修改部门表 - new  
+
+修改部门表dept：
+
+添加约束：为部门负责人mgr添加外码约束，参照员工emp表的员工编号列eno：并设置规则为：删除限制，更新级联。
+
+【注意：表名必须用小写。】
+```sql
+ALTER TABLE dept
+ADD FOREIGN KEY (mgr) REFERENCES emp(eno) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+```
+7.创建商品价格修改记录表 new  
+
+AUTO_INCREMENT  自动增长
+
+9.修改表结构：修改供应情况表  
+
+为供应情况表spj添加参照完整性约束（无需设置规则，采用默认约束规则）
+
+spj的SNO列参照s表SNO列，采用默认规则；
+
+spj的PNO列参照p表PNO列，设置删除级联；
+
+spj的JNO列参照j表JNO列，设置更新级联；
+
+[可以一条语句或者多条语句]
+```sql
+ALTER TABLE spj ADD CONSTRAINT spj_sno_fk FOREIGN KEY (SNO) REFERENCES s(SNO);
+ALTER TABLE spj ADD CONSTRAINT spj_pno_fk FOREIGN KEY (PNO) REFERENCES p(PNO) ON DELETE CASCADE;
+ALTER TABLE spj ADD CONSTRAINT spj_jno_fk FOREIGN KEY (JNO) REFERENCES j(JNO) ON UPDATE CASCADE;
+```
