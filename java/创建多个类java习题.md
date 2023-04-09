@@ -160,11 +160,11 @@ public class MyClass {
 【问题描述】  
 编写一个java应用程序，该程序中有3个类：Triangle,Rectangle和Circle,分别用来刻画“三角形”、“矩形”和“圆形”。具体要求如下：
 
-l  Triangle类具有类型为double的三条边属性，具有返回周长、面积以及修改三个边的方法。另外，Triangle类还具有一个boolean型的属性，该属性用来判断三个数能否构成一个三角形。
+  Triangle类具有类型为double的三条边属性，具有返回周长、面积以及修改三个边的方法。另外，Triangle类还具有一个boolean型的属性，该属性用来判断三个数能否构成一个三角形。
 
-l  Rectangle类具有类型为double的宽、高属性，具有返回周长和面积的方法。
+  Rectangle类具有类型为double的宽、高属性，具有返回周长和面积的方法。
 
-l  Circle类具有类型为double的半径属性，具有返回周长、面积的方法。
+  Circle类具有类型为double的半径属性，具有返回周长、面积的方法。
 
 ```java
 class Triangle{
