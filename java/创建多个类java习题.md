@@ -511,7 +511,7 @@ public class ShapeTest {
 
         int dx;       //运动方向及步长,+1向右，-1向左 
 
-    方法：
+方法：
 
         Ball（int pos);       //构造方法
 
@@ -525,7 +525,7 @@ public class ShapeTest {
 
         int  getPos();              //返回当前位置
 
-     主程序思路：
+ 主程序思路：
 
        （1）根据输入创建并初始化一组小球
 
