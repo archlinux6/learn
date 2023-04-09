@@ -57,6 +57,36 @@ for (int i : 数组名) {
 }
 ```
 可以用来打印数组元素
+
+### 7. String类
+创建字符串：
+```java
+String str = "Runoob"; // String 直接创建
+
+String str = new String("Runoob") //构造函数创建字符串
+
+char[] helloArray = { 'r', 'u', 'n', 'o', 'o', 'b'};
+String helloString = new String(helloArray);  
+```
+字符串长度:
+```java
+String site = "www.runoob.com";
+int len = site.length();
+```
+###### String 方法
+charAt() 方法 返回指定索引处的 char 值。
+```java
+public class Test {
+    public static void main(String args[]) {
+        String s = "www.runoob.com";
+        char result = s.charAt(6);
+        System.out.println(result);
+    }
+}
+```
+以上程序执行结果为：  
+n
+
 ###  Java标准库
 import java.util.Arrays;   
 
