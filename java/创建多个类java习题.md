@@ -422,3 +422,211 @@ public class ShapeTest {
 
 
 ```
+
+4.【问题描述】
+
+　　数轴上有一条长度为L（L为偶数)的线段，左端点在原点，右端点在坐标L处。有n个不计体积的小球在线段上，开始时所有的小球都处在偶数坐标上，速度方向向右，速度大小为1单位长度每秒。
+
+　　当小球到达线段的端点（左端点或右端点）的时候，会立即向相反的方向移动，速度大小仍然为原来大小。
+
+　　当两个小球撞到一起的时候，两个小球会分别向与自己原来移动的方向相反的方向，以原来的速度大小继续移动。
+
+　　现在，告诉你线段的长度L，小球数量n，以及n个小球的初始位置，请你计算t秒之后，各个小球的位置。
+
+提示：
+
+　　因为所有小球的初始位置都为偶数，而且线段的长度为偶数，可以证明，不会有三个小球同时相撞，小球到达线段端点以及小球之间的碰撞时刻均为整数。
+
+　　同时也可以证明两个小球发生碰撞的位置一定是整数（但不一定是偶数）。
+
+
+【输入形式】
+
+       输入的第一行包含三个整数n, L, t，用空格分隔，分别表示小球的个数、线段长度和你需要计算t秒之后小球的位置。
+
+　　第二行包含n个整数a1, a2, …, an，用空格分隔，表示初始时刻n个小球的位置。
+
+【输出形式】
+
+      输出一行包含n个整数，用空格分隔，第i个整数代表初始时刻位于ai的小球，在t秒之后的位置。
+
+【样例输入】
+
+      3 10 5
+
+      4 6 8
+
+【样例输出】
+
+      7 9 9
+
+【样例说明】
+
+ 初始时，三个小球的位置分别为4, 6, 8。
+
+
+
+一秒后，三个小球的位置分别为5, 7, 9。
+
+
+
+
+两秒后，第三个小球碰到墙壁，速度反向，三个小球位置分别为6, 8, 10。
+
+
+
+三秒后，第二个小球与第三个小球在位置9发生碰撞，速度反向（注意碰撞位置不一定为偶数），三个小球位置分别为7, 9, 9。
+
+
+
+四秒后，第一个小球与第二个小球在位置8发生碰撞，速度反向，第三个小球碰到墙壁，速度反向，三个小球位置分别为8, 8, 10。
+
+
+五秒后，三个小球的位置分别为7, 9, 9。
+
+
+【样例输入】
+
+    10 22 30
+
+    14 12 16 6 10 2 8 20 18 4
+
+【样例输出】
+
+    6 6 8 2 4 0 4 12 10 2
+
+【数据的规模与约定】
+
+对于所有评测用例，1 ≤ n ≤ 100，1 ≤ t ≤ 100，2 ≤ L ≤ 1000，0 < ai < L。L为偶数。
+
+　　保证所有小球的初始位置互不相同且均为偶数。
+
+【评分标准】
+
+   将球设计成类Ball,每个小球是一个对象，用一个对象数组来存放一组小球（如非此设计程序不得分）：
+
+   属性：
+
+        int  pos;    //坐标位置 
+
+        int dx;       //运动方向及步长,+1向右，-1向左 
+
+    方法：
+
+        Ball（int pos);       //构造方法
+
+        void next()；              //一秒运动一次
+
+        boolean isTouch(Ball other)；//判断是否与另一球相碰
+
+        boolean reachBorder(int L) ；//判断是否到达边界
+
+        changeDir()；             //改变运动方向，向左变向右，向右变向左
+
+        int  getPos();              //返回当前位置
+
+     主程序思路：
+
+       （1）根据输入创建并初始化一组小球
+
+       （2）while(每秒循环一次）{
+
+                         判断每个球当前有没有运动到边界，到边界的球，要改变其运动方向
+
+                         判断任意两个球当前有没有碰撞，如碰撞则彼此都要改变运动方向
+
+                         让每个球运动一次
+
+                }
+
+        （3）打印每个小球的位置
+
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int L = scanner.nextInt();
+        int t = scanner.nextInt();
+
+        Ball[] balls = new Ball[n];
+        for (int i = 0; i < n; i++) {
+            int pos = scanner.nextInt();
+            balls[i] = new Ball(pos);
+        }
+
+        // 每秒循环一次
+        int i = 0;
+        while ( i < t) {
+             // 计算球之间的碰撞
+             for (int j = 0; j < n; j++) {
+                for (int k = j + 1; k < n; k++) {
+                    if (balls[j].isTouch(balls[k])) {
+                        balls[j].changeDir();
+                        balls[k].changeDir();
+                    }
+                }
+            }
+
+            // 判断每个球当前有没有运动到边界，到边界的球，要改变其运动方向
+            for (Ball ball : balls) {
+                if (ball.reachBorder(L)) {
+                    ball.changeDir();
+                }
+            }
+           
+            // 让每个球运动一次
+            for (Ball ball : balls) {
+                ball.next();
+            }
+            i++;
+          
+      }
+
+
+        // 打印每个小球的位置
+        for (Ball ball : balls) {
+            System.out.print(ball.getPos() + " ");
+        }
+    }
+}
+
+class Ball {
+    private int pos;
+    private int dx;
+
+    public Ball(int pos) {
+        this.pos = pos;
+        this.dx = 1;
+    }
+
+    public void next() {
+        pos += dx;
+    }
+
+    public boolean isTouch(Ball other) {
+        return Math.abs(pos - other.pos) == 0 && dx == -other.dx;
+    }
+
+    public boolean reachBorder(int L) {
+        return pos == 0 || pos == L;
+    }
+
+    public void changeDir() {
+        dx = -dx;
+    }
+
+    public int getPos() {
+        return pos;
+    }
+}
+
+
+
+
+
+
+```
