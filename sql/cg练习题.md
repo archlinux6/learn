@@ -109,6 +109,7 @@ ADD FOREIGN KEY (mgr) REFERENCES emp(eno) ON DELETE RESTRICT ON UPDATE CASCADE;
 7.创建商品价格修改记录表 new  
 
 AUTO_INCREMENT  自动增长
+  
 
 9.修改表结构：修改供应情况表  
 
@@ -126,3 +127,36 @@ ALTER TABLE spj ADD CONSTRAINT spj_sno_fk FOREIGN KEY (SNO) REFERENCES s(SNO);
 ALTER TABLE spj ADD CONSTRAINT spj_pno_fk FOREIGN KEY (PNO) REFERENCES p(PNO) ON DELETE CASCADE;
 ALTER TABLE spj ADD CONSTRAINT spj_jno_fk FOREIGN KEY (JNO) REFERENCES j(JNO) ON UPDATE CASCADE;
 ```
+
+在SQL中，"fk"通常是外键（foreign key）的缩写。在 spj_sno_fk 中，"fk"可能表示 spj 表中的某个列作为另一个表中的行数据的引用，即 spj_sno_fk 列可能包含了对于 "sno" 表中主键的参照。
+  
+  10.修改表结构：修改课程表  
+
+  修改课程表course的CNAME属性列的类型为  VARCHAR(30)；
+```sql
+  alter table course modify CNAME varchar(30);
+```
+同第四题
+
+11.修改表结构：修改零件表  
+
+为零件表：p 增加一个规格(GUIGE)列，数据类型为可变长字符，长度50；
+```sql
+alter table p add GUIGE varchar(50);
+```
+
+13.表定义：创建供应商表  
+SSTATUS列  
+约束：取值0或1  
+```sql
+check(SSTATUS=0 or SSTATUS=1)
+```
+这是一个SQL中的约束条件（constraint），用于限制一列（column）中的取值必须满足指定的条件。该约束要求该列的数据只能为0或1，否则将无法插入或更新数据。
+
+17.	表定义：创建course表
+  
+- 惟一约束：`UNIQUE`  
+- 约束：`>0` 
+`CHECK(CCREDIT > 0)`  
+- 数值型NUMERIC（9位，其中2位小数）  
+`DECIMAL(9,2) `
