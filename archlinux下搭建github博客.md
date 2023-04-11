@@ -85,6 +85,9 @@ node_modules  source  _config.landscape.yml  package.json
 scaffolds     themes  _config.yml            package-lock.json
 > code .   //用vscode打开当前目录下的所有文件
 ```
+_config.yml
+网站的 配置 信息，您可以在此配置大部分的参数。  
+
 修改 _config.yml 文件 将 deploy 修改为以下 repository 为自己的博客地址，如：
 ```
 deploy:
@@ -94,7 +97,34 @@ deploy:
 ```
 接着
 ```
+> hexo s  //在本地运行
+> hexo d  //部署到网站
+```  
+在Hexo项目根目录下  
+ 选择github 安装
+```
+git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+```
+在themes文件夹下出现butterfly文件夹
 
-> hexo s  //建立本地服务器，可以进网址看看是否成功
-> hexo d  //提交到GitHub 
+修改Hexo配置  
+```
+// 在Hexo的 _config.yml  文件里修改主题
+theme: butterfly
+```
+安装依赖   
+
+ ```
+//butterfly使用需要安装 pug 以及 stylus 的渲染器
+npm install hexo-renderer-pug hexo-renderer-stylus --save
+```
+
+### 参考：https://hexo.io/zh-cn/
+hexo的一些命令：
+```
+hexo init # 初始化项目
+hexo g # 生成静态文件
+hexo clean # 清楚静态文件
+hexo d # 推送静态文件至 git远程仓库
+hexo s # 本地预览项目
 ```
