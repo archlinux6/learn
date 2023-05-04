@@ -100,7 +100,7 @@ deploy:
 > hexo s  //在本地运行
 > hexo d  //部署到网站
 ```  
-在Hexo项目根目录下  
+在Hexo项目根目录下 在Hexo项目根目录下  
  选择github 安装
 ```
 git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
@@ -118,7 +118,11 @@ theme: butterfly
 //butterfly使用需要安装 pug 以及 stylus 的渲染器
 npm install hexo-renderer-pug hexo-renderer-stylus --save
 ```
-
+新建博客
+```
+hexo new archlinux上搭建github博客
+```
+在Hexo项目根目录下输入以上命令，会在source/_posts下创建名为“archlinux上搭建github博客” 的md文件
 ### 参考：https://hexo.io/zh-cn/
 hexo的一些命令：
 ```
